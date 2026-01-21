@@ -3,6 +3,14 @@ import { supabaseAdmin } from '@/lib/supabase'
 
 export async function POST(request: NextRequest) {
   try {
+    // Validate environment variables at runtime
+    if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
+      return NextResponse.json(
+        { error: 'Server configuration error: Missing Supabase environment variables' },
+        { status: 500 }
+      )
+    }
+
     const body = await request.json()
     const { businessName, businessSize, email, contactNumber, bestTimeToCall, challenges } = body
 

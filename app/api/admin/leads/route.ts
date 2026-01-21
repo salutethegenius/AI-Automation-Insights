@@ -23,6 +23,14 @@ export async function GET(request: NextRequest) {
     )
   }
 
+  // Validate environment variables at runtime
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
+    return NextResponse.json(
+      { error: 'Server configuration error: Missing Supabase environment variables' },
+      { status: 500 }
+    )
+  }
+
   if (!supabaseAdmin) {
     return NextResponse.json(
       { error: 'Server configuration error' },
