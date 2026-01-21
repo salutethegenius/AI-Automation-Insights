@@ -3,15 +3,20 @@ import { supabaseAdmin } from '@/lib/supabase'
 
 // Basic auth check - in production, use proper authentication
 function isAuthorized(request: NextRequest): boolean {
-  // For now, check for a simple password in query params or header
-  // In production, implement proper JWT/auth
+  // Prefer Authorization header over query params (more secure)
   const authHeader = request.headers.get('authorization')
   const apiKey = request.nextUrl.searchParams.get('key')
   
-  // Simple check - in production, use proper auth
+  // Simple check - in production, implement proper JWT/auth
   const expectedKey = process.env.ADMIN_API_KEY || 'dev-key-change-in-production'
   
-  return authHeader === `Bearer ${expectedKey}` || apiKey === expectedKey
+  // Prefer header over query param for security (query params can be logged)
+  if (authHeader && authHeader.startsWith('Bearer ')) {
+    return authHeader === `Bearer ${expectedKey}`
+  }
+  
+  // Fallback to query param (less secure, but functional)
+  return apiKey === expectedKey
 }
 
 export async function GET(request: NextRequest) {
