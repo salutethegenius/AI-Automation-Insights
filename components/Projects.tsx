@@ -64,6 +64,12 @@ const projects: Project[] = [
     description: 'Anonymous crime reporting platform trusted by citizens across The Bahamas. Report what you saw, without being seen.',
   },
   {
+    name: 'RicoBenzia',
+    url: 'https://ricobenzia.com',
+    status: 'live',
+    description: 'A comprehensive Web3 portal and gateway to decentralized services, blockchain insights, and next-generation digital assets.',
+  },
+  {
     name: 'Anchor',
     url: '#',
     status: 'coming-soon',
