@@ -4,6 +4,7 @@ import { Deliverables } from '@/components/Deliverables'
 import { WhoFor } from '@/components/WhoFor'
 import { Pricing } from '@/components/Pricing'
 import { SocialProof } from '@/components/SocialProof'
+import { Projects } from '@/components/Projects'
 import { BookingForm } from '@/components/BookingForm'
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <WhoFor />
       <Pricing />
       <SocialProof />
+      <Projects />
       <BookingForm />
     </main>
   )
