@@ -1,7 +1,7 @@
 interface Lead {
   id: string
   business_name: string
-  business_size: string
+  business_revenue: string
   challenges: string
   created_at: string
 }
@@ -15,7 +15,7 @@ export const LeadsTable = ({ leads, searchTerm }: LeadsTableProps) => {
   const filteredLeads = leads.filter(
     (lead) =>
       lead.business_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      lead.business_size.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      lead.business_revenue.toLowerCase().includes(searchTerm.toLowerCase()) ||
       lead.challenges.toLowerCase().includes(searchTerm.toLowerCase())
   )
 
@@ -49,7 +49,7 @@ export const LeadsTable = ({ leads, searchTerm }: LeadsTableProps) => {
                 Business Name
               </th>
               <th className="px-6 py-4 text-left text-sm font-semibold text-turquoise">
-                Size
+                Annual Revenue
               </th>
               <th className="px-6 py-4 text-left text-sm font-semibold text-turquoise">
                 Challenges
@@ -68,7 +68,7 @@ export const LeadsTable = ({ leads, searchTerm }: LeadsTableProps) => {
                 <td className="px-6 py-4 text-white font-medium">
                   {lead.business_name}
                 </td>
-                <td className="px-6 py-4 text-white/80">{lead.business_size}</td>
+                <td className="px-6 py-4 text-white/80">{lead.business_revenue}</td>
                 <td className="px-6 py-4 text-white/80 max-w-md">
                   <div className="truncate" title={lead.challenges}>
                     {lead.challenges}

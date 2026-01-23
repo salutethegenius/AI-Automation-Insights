@@ -2,7 +2,7 @@
 CREATE TABLE IF NOT EXISTS assessment_leads (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   business_name TEXT NOT NULL,
-  business_size TEXT NOT NULL,
+  business_revenue TEXT NOT NULL,
   challenges TEXT NOT NULL,
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );

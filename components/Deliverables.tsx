@@ -3,19 +3,19 @@ import { SectionWrapper } from './ui/SectionWrapper'
 const deliverables = [
   {
     title: 'Workflow Review',
-    description: 'Map your current processes and tools.',
+    description: 'Comprehensive mapping of cross-departmental processes and enterprise tools.',
   },
   {
     title: 'AI & Automation Opportunities',
-    description: 'See exactly where your business can save time and reduce mistakes.',
+    description: 'Strategic identification of scaling opportunities to reduce overhead and departmental friction.',
   },
   {
     title: 'Actionable Roadmap',
-    description: 'Step-by-step recommendations tailored to your business.',
+    description: 'Enterprise-grade implementation strategy tailored to your organization’s growth goals.',
   },
   {
     title: 'Optional Consultation',
-    description: '1-hour session to walk you through findings.',
+    description: 'Executive-level session to walk leadership through findings and automation ROI.',
   },
 ]
 

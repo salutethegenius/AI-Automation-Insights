@@ -6,23 +6,23 @@ import { Button } from './ui/Button'
 
 const commonChallenges = [
   'Manual data entry and repetitive tasks',
-  'Customer communication and follow-ups',
-  'Inventory management and tracking',
-  'Scheduling and appointment management',
-  'Invoice generation and payment tracking',
-  'Email management and organization',
-  'Reporting and data analysis',
-  'Document management and filing',
-  'Social media content creation',
-  'Lead generation and customer acquisition',
-  'Employee onboarding and training',
-  'Quality control and error reduction',
+  'Departmental silos and communication gaps',
+  'Scaling operations without increasing headcount',
+  'Legacy system integration and data flow',
+  'Customer relationship management (CRM) optimization',
+  'Automated reporting and high-level data analysis',
+  'Workflow bottlenecks and operational friction',
+  'Document management and digital archiving',
+  'Lead management and automated follow-ups',
+  'Employee onboarding and standard operating procedures (SOPs)',
+  'Quality control and standardized error reduction',
+  'Inventory and supply chain automation',
 ]
 
 export const BookingForm = () => {
   const [formData, setFormData] = useState({
     businessName: '',
-    businessSize: '',
+    businessRevenue: '',
     email: '',
     contactNumber: '',
     bestTimeToCall: '',
@@ -70,7 +70,7 @@ export const BookingForm = () => {
       setSubmitStatus('success')
       setFormData({ 
         businessName: '', 
-        businessSize: '', 
+        businessRevenue: '', 
         email: '',
         contactNumber: '',
         bestTimeToCall: '',
@@ -116,7 +116,7 @@ export const BookingForm = () => {
     <SectionWrapper id="booking-form" className="bg-dark-bg fade-in">
       <div className="text-center mb-12">
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-turquoise mb-6">
-          Ready to work smarter?
+          Ready to scale your enterprise?
         </h2>
       </div>
 
@@ -127,7 +127,7 @@ export const BookingForm = () => {
               htmlFor="businessName"
               className="block text-sm font-semibold text-white mb-2"
             >
-              Business Name *
+              Company Name *
             </label>
             <input
               type="text"
@@ -137,32 +137,31 @@ export const BookingForm = () => {
               value={formData.businessName}
               onChange={handleChange}
               className="w-full px-4 py-3 border-2 border-white/20 bg-dark-card text-white rounded-lg focus:border-turquoise focus:outline-none transition-colors placeholder:text-white/40"
-              placeholder="Enter your business name"
+              placeholder="Enter your company name"
             />
           </div>
 
           <div>
             <label
-              htmlFor="businessSize"
+              htmlFor="businessRevenue"
               className="block text-sm font-semibold text-white mb-2"
             >
-              Size of Business / Employees *
+              Annual Revenue *
             </label>
             <select
-              id="businessSize"
-              name="businessSize"
+              id="businessRevenue"
+              name="businessRevenue"
               required
-              value={formData.businessSize}
+              value={formData.businessRevenue}
               onChange={handleChange}
               className="w-full px-4 py-3 border-2 border-white/20 bg-dark-card text-white rounded-lg focus:border-turquoise focus:outline-none transition-colors"
             >
-              <option value="">Select business size...</option>
-              <option value="Solo / Just me">Solo / Just me</option>
-              <option value="2-5 employees">2-5 employees</option>
-              <option value="6-10 employees">6-10 employees</option>
-              <option value="11-25 employees">11-25 employees</option>
-              <option value="26-50 employees">26-50 employees</option>
-              <option value="50+ employees">50+ employees</option>
+              <option value="">Select annual revenue...</option>
+              <option value="$250k - $500k">$250k - $500k</option>
+              <option value="$500k - $1M">$500k - $1M</option>
+              <option value="$1M - $5M">$1M - $5M</option>
+              <option value="$5M - $10M">$5M - $10M</option>
+              <option value="$10M+">$10M+</option>
             </select>
           </div>
 

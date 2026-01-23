@@ -1,9 +1,9 @@
 import { SectionWrapper } from './ui/SectionWrapper'
 
 const targetAudience = [
-  'Small-to-medium Bahamian businesses looking to grow efficiently',
-  'Business owners curious about AI but unsure where to start',
-  'Teams wanting to save time and reduce operational friction',
+  'Established Bahamian Enterprises with $250k – $5M+ in annual revenue',
+  'Leadership teams looking to leverage AI to scale without increasing headcount',
+  'Operations-heavy businesses looking to automate complex repetitive tasks and data workflows',
 ]
 
 export const WhoFor = () => {

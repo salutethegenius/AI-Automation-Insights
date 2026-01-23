@@ -63,11 +63,11 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json()
-    let { businessName, businessSize, email, contactNumber, bestTimeToCall, challenges } = body
+    let { businessName, businessRevenue, email, contactNumber, bestTimeToCall, challenges } = body
 
     // Sanitize inputs
     businessName = sanitizeInput(businessName || '')
-    businessSize = sanitizeInput(businessSize || '')
+    businessRevenue = sanitizeInput(businessRevenue || '')
     email = sanitizeInput(email || '').toLowerCase()
     contactNumber = sanitizeInput(contactNumber || '')
     bestTimeToCall = sanitizeInput(bestTimeToCall || '')
@@ -83,7 +83,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Validate required fields
-    if (!businessName || !businessSize || !email || !contactNumber || !bestTimeToCall || !challenges) {
+    if (!businessName || !businessRevenue || !email || !contactNumber || !bestTimeToCall || !challenges) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -103,7 +103,7 @@ export async function POST(request: NextRequest) {
       .insert([
         {
           business_name: businessName,
-          business_size: businessSize,
+          business_revenue: businessRevenue,
           email: email,
           contact_number: contactNumber,
           best_time_to_call: bestTimeToCall,

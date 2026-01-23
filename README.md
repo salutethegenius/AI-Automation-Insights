@@ -33,7 +33,7 @@ npm install
    Create a table named `assessment_leads` with the following columns:
    - `id` (uuid, primary key, default: `gen_random_uuid()`)
    - `business_name` (text)
-   - `business_size` (text)
+   - `business_revenue` (text)
    - `challenges` (text)
    - `created_at` (timestamp, default: `now()`)
 

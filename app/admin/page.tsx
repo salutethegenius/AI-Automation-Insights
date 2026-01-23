@@ -6,7 +6,7 @@ import Link from 'next/link'
 interface Lead {
   id: string
   business_name: string
-  business_size: string
+  business_revenue: string
   email: string
   contact_number: string
   best_time_to_call: string
@@ -85,10 +85,10 @@ export default function AdminDashboard() {
   const filteredLeads = leads.filter((lead) => {
     try {
       const nameMatch = lead.business_name?.toLowerCase().includes(searchTerm.toLowerCase()) || false
-      const sizeMatch = lead.business_size?.toLowerCase().includes(searchTerm.toLowerCase()) || false
+      const revenueMatch = lead.business_revenue?.toLowerCase().includes(searchTerm.toLowerCase()) || false
       const emailMatch = lead.email?.toLowerCase().includes(searchTerm.toLowerCase()) || false
       const challengesMatch = lead.challenges?.toLowerCase().includes(searchTerm.toLowerCase()) || false
-      return nameMatch || sizeMatch || emailMatch || challengesMatch
+      return nameMatch || revenueMatch || emailMatch || challengesMatch
     } catch (err) {
       return false
     }
@@ -229,7 +229,7 @@ export default function AdminDashboard() {
             type="text"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Search by business name, email, size, or challenges..."
+            placeholder="Search by business name, email, revenue, or challenges..."
             className="w-full px-4 py-3 border-2 border-white/20 bg-dark-card text-white rounded-lg focus:border-turquoise focus:outline-none transition-colors placeholder:text-white/40"
           />
         </div>
@@ -259,7 +259,7 @@ export default function AdminDashboard() {
                       Business Name
                     </th>
                     <th className="px-6 py-4 text-left text-sm font-semibold text-turquoise">
-                      Size
+                      Annual Revenue
                     </th>
                     <th className="px-6 py-4 text-left text-sm font-semibold text-turquoise">
                       Email
@@ -288,7 +288,7 @@ export default function AdminDashboard() {
                         {lead.business_name}
                       </td>
                       <td className="px-6 py-4 text-white/80">
-                        {lead.business_size}
+                        {lead.business_revenue}
                       </td>
                       <td className="px-6 py-4 text-white/80">
                         <a 

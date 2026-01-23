@@ -5,7 +5,7 @@ export const Pricing = () => {
     <SectionWrapper className="bg-dark-bg fade-in">
       <div className="text-center mb-12">
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-turquoise mb-6">
-          Invest in your business growth
+          Invest in Enterprise Efficiency
         </h2>
       </div>
       
@@ -15,31 +15,31 @@ export const Pricing = () => {
             <div className="flex flex-col md:flex-row md:items-center md:justify-between pb-6 border-b border-white/10">
               <div>
                 <h3 className="font-heading text-2xl font-bold text-turquoise mb-2">
-                  Single Assessment
+                  Strategic Operational Audit
                 </h3>
-                <p className="text-white/70">Fixed scope, one-time</p>
+                <p className="text-white/70">Comprehensive review of SME workflows</p>
               </div>
               <div className="text-3xl font-bold text-white mt-4 md:mt-0">
-                $1,000 – $1,500
+                $1,500 – $2,500
               </div>
             </div>
             
             <div className="flex flex-col md:flex-row md:items-center md:justify-between pt-6">
               <div>
                 <h3 className="font-heading text-2xl font-bold text-turquoise mb-2">
-                  Optional Follow-Up Roadmap
+                  Automation Implementation Roadmap
                 </h3>
-                <p className="text-white/70">If guidance on implementation is desired</p>
+                <p className="text-white/70">Phase-by-phase execution strategy for scaling</p>
               </div>
               <div className="text-3xl font-bold text-white mt-4 md:mt-0">
-                $2,000 – $3,000
+                $3,500 – $5,000+
               </div>
             </div>
           </div>
         </div>
         
         <p className="text-center text-lg text-white/80">
-          Pricing reflects the actionable insights and practical roadmap you'll receive—no surprises, no hidden fees.
+          Pricing is scaled based on operational complexity and organization size, ensuring maximum ROI for established enterprises.
         </p>
       </div>
     </SectionWrapper>

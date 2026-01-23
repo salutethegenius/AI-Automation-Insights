@@ -5,7 +5,7 @@ export const Problem = () => {
     <SectionWrapper className="bg-dark-surface fade-in">
       <div className="text-center mb-12">
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-turquoise mb-6">
-          Most small businesses waste hours on tasks that could be automated.
+          Established enterprises often hit a ceiling due to operational bottlenecks.
         </h2>
       </div>
       
@@ -13,15 +13,15 @@ export const Problem = () => {
         <ul className="space-y-6 text-lg text-white/90">
           <li className="flex items-start">
             <span className="text-turquoise text-2xl mr-4">•</span>
-            <span>Manual processes slow growth and limit your team's productivity.</span>
+            <span>Legacy workflows and departmental silos slow down your expansion.</span>
           </li>
           <li className="flex items-start">
             <span className="text-turquoise text-2xl mr-4">•</span>
-            <span>AI and automation opportunities often go unnoticed.</span>
+            <span>Untapped AI opportunities lead to unnecessary overhead and headcount.</span>
           </li>
           <li className="flex items-start">
             <span className="text-turquoise text-2xl mr-4">•</span>
-            <span>Without a clear roadmap, technology investments can fail.</span>
+            <span>Without a strategic automation roadmap, digital transformation is just a cost, not an asset.</span>
           </li>
         </ul>
         

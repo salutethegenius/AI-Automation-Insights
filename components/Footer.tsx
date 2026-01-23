@@ -54,6 +54,16 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link
+                  href="https://baco-portal.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-black/80 hover:text-black transition-colors text-sm"
+                >
+                  BACO Portal
+                </Link>
+              </li>
+              <li>
                 <a
                   href="#booking-form"
                   className="text-black/80 hover:text-black transition-colors text-sm"
