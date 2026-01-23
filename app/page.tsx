@@ -6,6 +6,7 @@ import { Pricing } from '@/components/Pricing'
 import { SocialProof } from '@/components/SocialProof'
 import { Projects } from '@/components/Projects'
 import { BookingForm } from '@/components/BookingForm'
+import { Footer } from '@/components/Footer'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <SocialProof />
       <Projects />
       <BookingForm />
+      <Footer />
     </main>
   )
 }
