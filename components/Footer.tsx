@@ -40,7 +40,7 @@ export const Footer = () => {
                   rel="noopener noreferrer"
                   className="text-black/80 hover:text-black transition-colors text-sm"
                 >
-                  KemisDigital
+                  KemisDigital – AI Marketing Firm
                 </Link>
               </li>
               <li>
@@ -51,16 +51,6 @@ export const Footer = () => {
                   className="text-black/80 hover:text-black transition-colors text-sm"
                 >
                   Kemis Academy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://baco-portal.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-black/80 hover:text-black transition-colors text-sm"
-                >
-                  BACO Portal
                 </Link>
               </li>
               <li>
@@ -106,19 +96,15 @@ export const Footer = () => {
               © {currentYear} The Kemis Group of Companies Inc. All rights reserved.
             </p>
             <div className="flex items-center gap-2 text-sm text-black/70">
-              <span>Made with</span>
-              <svg
-                className="w-4 h-4 text-black/70"
-                fill="currentColor"
-                viewBox="0 0 20 20"
+              <span>Made with ❤️</span>
+              <a
+                href="https://kemisdigital.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-black transition-colors"
               >
-                <path
-                  fillRule="evenodd"
-                  d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span>in The Bahamas</span>
+                KemisDigital
+              </a>
             </div>
           </div>
         </div>

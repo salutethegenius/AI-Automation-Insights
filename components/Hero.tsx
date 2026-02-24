@@ -13,8 +13,8 @@ export const Hero = () => {
     <section className="relative min-h-screen flex flex-col items-center justify-center bg-dark-bg px-4 md:px-8 lg:px-16 fade-in">
       <div className="max-w-6xl mx-auto text-center">
         <p className="text-sm md:text-base font-semibold tracking-widest uppercase mb-8">
-          <span className="text-[#00A4D3]">My</span>{' '}
-          <span className="text-gold">Bahamas</span>
+          <span className="text-[#00A4D3]">The Commonwealth of</span>{' '}
+          <span className="text-gold">The Bahamas</span>
         </p>
         <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-gold mb-6 text-balance">
           Improve Efficiency and Reclaim Time Within Your Company
