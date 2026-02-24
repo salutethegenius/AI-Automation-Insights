@@ -38,7 +38,14 @@ export const BookingForm = () => {
     // Validate challenges before submission
     const challengesText = getChallengesText()
     
+    // #region agent log
+    fetch('http://127.0.0.1:7250/ingest/93b3c464-e613-4ca5-89da-882dec6414e4',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'BookingForm.tsx:40',message:'handleSubmit called',data:{challengesText,challengesArray:formData.challenges,customChallenges:formData.customChallenges},timestamp:Date.now(),hypothesisId:'D'})}).catch(()=>{});
+    // #endregion
+    
     if (!challengesText.trim()) {
+      // #region agent log
+      fetch('http://127.0.0.1:7250/ingest/93b3c464-e613-4ca5-89da-882dec6414e4',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'BookingForm.tsx:47',message:'challenges validation failed',data:{challengesText},timestamp:Date.now(),hypothesisId:'D'})}).catch(()=>{});
+      // #endregion
       setSubmitStatus('error')
       return
     }
@@ -52,6 +59,10 @@ export const BookingForm = () => {
         challenges: challengesText,
       }
       
+      // #region agent log
+      fetch('http://127.0.0.1:7250/ingest/93b3c464-e613-4ca5-89da-882dec6414e4',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'BookingForm.tsx:62',message:'submitting to API',data:{businessName:formData.businessName,email:formData.email},timestamp:Date.now(),hypothesisId:'C'})}).catch(()=>{});
+      // #endregion
+      
       const response = await fetch('/api/submit-assessment', {
         method: 'POST',
         headers: {
@@ -60,12 +71,23 @@ export const BookingForm = () => {
         body: JSON.stringify(requestBody),
       })
 
+      // #region agent log
+      fetch('http://127.0.0.1:7250/ingest/93b3c464-e613-4ca5-89da-882dec6414e4',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'BookingForm.tsx:73',message:'API response received',data:{status:response.status,ok:response.ok},timestamp:Date.now(),hypothesisId:'C'})}).catch(()=>{});
+      // #endregion
+
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}))
+        // #region agent log
+        fetch('http://127.0.0.1:7250/ingest/93b3c464-e613-4ca5-89da-882dec6414e4',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'BookingForm.tsx:80',message:'API error response',data:{errorData,status:response.status},timestamp:Date.now(),hypothesisId:'E'})}).catch(()=>{});
+        // #endregion
         throw new Error('Failed to submit form')
       }
 
       const result = await response.json()
+      
+      // #region agent log
+      fetch('http://127.0.0.1:7250/ingest/93b3c464-e613-4ca5-89da-882dec6414e4',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'BookingForm.tsx:88',message:'submission success',data:{result},timestamp:Date.now(),hypothesisId:'C'})}).catch(()=>{});
+      // #endregion
       
       setSubmitStatus('success')
       setFormData({ 
@@ -78,6 +100,9 @@ export const BookingForm = () => {
         customChallenges: '' 
       })
     } catch (error) {
+      // #region agent log
+      fetch('http://127.0.0.1:7250/ingest/93b3c464-e613-4ca5-89da-882dec6414e4',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'BookingForm.tsx:103',message:'submission error caught',data:{error:String(error)},timestamp:Date.now(),hypothesisId:'C'})}).catch(()=>{});
+      // #endregion
       setSubmitStatus('error')
       console.error('Error submitting form:', error)
     } finally {
@@ -116,7 +141,7 @@ export const BookingForm = () => {
     <SectionWrapper id="booking-form" className="bg-dark-bg fade-in">
       <div className="text-center mb-12">
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-turquoise mb-6">
-          Ready to scale your enterprise?
+          Ready to modernize your operations?
         </h2>
       </div>
 
@@ -136,7 +161,7 @@ export const BookingForm = () => {
               required
               value={formData.businessName}
               onChange={handleChange}
-              className="w-full px-4 py-3 border-2 border-white/20 bg-dark-card text-white rounded-lg focus:border-turquoise focus:outline-none transition-colors placeholder:text-white/40"
+              className="w-full px-4 py-3 border-2 border-gold/50 bg-dark-card text-white rounded-lg focus:border-gold focus:outline-none transition-colors placeholder:text-white/40"
               placeholder="Enter your company name"
             />
           </div>
@@ -154,9 +179,10 @@ export const BookingForm = () => {
               required
               value={formData.businessRevenue}
               onChange={handleChange}
-              className="w-full px-4 py-3 border-2 border-white/20 bg-dark-card text-white rounded-lg focus:border-turquoise focus:outline-none transition-colors"
+              className="w-full px-4 py-3 border-2 border-gold/50 bg-dark-card text-white rounded-lg focus:border-gold focus:outline-none transition-colors"
             >
               <option value="">Select annual revenue...</option>
+              <option value="$100k - $250k">$100k - $250k</option>
               <option value="$250k - $500k">$250k - $500k</option>
               <option value="$500k - $1M">$500k - $1M</option>
               <option value="$1M - $5M">$1M - $5M</option>
@@ -179,7 +205,7 @@ export const BookingForm = () => {
               required
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-4 py-3 border-2 border-white/20 bg-dark-card text-white rounded-lg focus:border-turquoise focus:outline-none transition-colors placeholder:text-white/40"
+              className="w-full px-4 py-3 border-2 border-gold/50 bg-dark-card text-white rounded-lg focus:border-gold focus:outline-none transition-colors placeholder:text-white/40"
               placeholder="your.email@example.com"
             />
           </div>
@@ -198,7 +224,7 @@ export const BookingForm = () => {
               required
               value={formData.contactNumber}
               onChange={handleChange}
-              className="w-full px-4 py-3 border-2 border-white/20 bg-dark-card text-white rounded-lg focus:border-turquoise focus:outline-none transition-colors placeholder:text-white/40"
+              className="w-full px-4 py-3 border-2 border-gold/50 bg-dark-card text-white rounded-lg focus:border-gold focus:outline-none transition-colors placeholder:text-white/40"
               placeholder="(242) 555-1234"
             />
           </div>
@@ -216,7 +242,7 @@ export const BookingForm = () => {
               required
               value={formData.bestTimeToCall}
               onChange={handleChange}
-              className="w-full px-4 py-3 border-2 border-white/20 bg-dark-card text-white rounded-lg focus:border-turquoise focus:outline-none transition-colors"
+              className="w-full px-4 py-3 border-2 border-gold/50 bg-dark-card text-white rounded-lg focus:border-gold focus:outline-none transition-colors"
             >
               <option value="">Select best time...</option>
               <option value="Morning (9 AM - 12 PM)">Morning (9 AM - 12 PM)</option>
@@ -234,7 +260,7 @@ export const BookingForm = () => {
               {commonChallenges.map((challenge) => (
                 <label
                   key={challenge}
-                  className="flex items-start p-3 border-2 border-white/20 bg-dark-card rounded-lg hover:border-turquoise hover:bg-dark-surface transition-all cursor-pointer group"
+                  className="flex items-start p-3 border-2 border-gold/50 bg-dark-card rounded-lg hover:border-gold hover:bg-dark-surface transition-all cursor-pointer group"
                 >
                   <input
                     type="checkbox"
@@ -261,8 +287,8 @@ export const BookingForm = () => {
                 rows={3}
                 value={formData.customChallenges}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border-2 border-white/20 bg-dark-card text-white rounded-lg focus:border-turquoise focus:outline-none transition-colors resize-none placeholder:text-white/40"
-                placeholder="Tell us about any other challenges or goals not listed above..."
+                className="w-full px-4 py-3 border-2 border-gold/50 bg-dark-card text-white rounded-lg focus:border-gold focus:outline-none transition-colors resize-none placeholder:text-white/40"
+                placeholder="Tell us about the bottlenecks in your organization..."
               />
             </div>
             {formData.challenges.length === 0 && !formData.customChallenges.trim() && submitStatus === 'error' && (

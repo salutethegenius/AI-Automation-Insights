@@ -16,12 +16,6 @@ const projects: Project[] = [
     description: 'Sovereign AI & Digital Infrastructure for The Bahamas. Building the foundation for a digital future across the archipelago.',
   },
   {
-    name: 'Local Squares',
-    url: 'https://localsquares.vercel.app/',
-    status: 'live',
-    description: 'Neighborhood business directory connecting Bahamian businesses with local customers. Pin your business, get discovered, and grow your local presence.',
-  },
-  {
     name: 'LawBey.com',
     url: 'https://lawbey.com',
     status: 'live',
@@ -38,12 +32,6 @@ const projects: Project[] = [
     url: 'https://kemisdigital.com',
     status: 'live',
     description: 'All-in-one social media marketing automation platform with AI chatbots, content creation, ad campaigns, CRM, and more.',
-  },
-  {
-    name: 'Urban Nassau Rides',
-    url: 'https://urbannassau2-0.vercel.app/',
-    status: 'live',
-    description: 'Ride service, delivery, and courier platform for Nassau. Fast, reliable transportation and logistics solutions.',
   },
   {
     name: 'Kemis Academy',
@@ -81,7 +69,7 @@ export const Projects = () => {
   return (
     <SectionWrapper className="bg-dark-surface fade-in">
       <div className="text-center mb-12">
-        <h2 className="font-heading text-3xl md:text-4xl font-bold text-turquoise mb-4">
+        <h2 className="font-heading text-3xl md:text-4xl font-bold text-gold mb-4">
           Our Work
         </h2>
         <p className="text-white/80 text-lg max-w-2xl mx-auto">

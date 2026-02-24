@@ -103,7 +103,7 @@ export async function POST(request: NextRequest) {
       .insert([
         {
           business_name: businessName,
-          business_revenue: businessRevenue,
+          business_size: businessRevenue,
           email: email,
           contact_number: contactNumber,
           best_time_to_call: bestTimeToCall,

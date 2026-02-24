@@ -44,6 +44,19 @@
       transform: translateY(0);
     }
   }
+
+  .animate-bounce-down {
+    animation: bounceDown 2s ease-in-out infinite;
+  }
+
+  @keyframes bounceDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(8px);
+    }
+  }
   
   /* Custom checkbox styling for dark theme */
   input[type="checkbox"] {

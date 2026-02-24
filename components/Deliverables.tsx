@@ -2,20 +2,20 @@ import { SectionWrapper } from './ui/SectionWrapper'
 
 const deliverables = [
   {
-    title: 'Workflow Review',
-    description: 'Comprehensive mapping of cross-departmental processes and enterprise tools.',
+    title: 'Operational Systems & Workflow Audit',
+    description: 'Detailed mapping of cross-departmental workflows, systems, and data handoffs to reveal friction, risk, and duplication.',
   },
   {
-    title: 'AI & Automation Opportunities',
-    description: 'Strategic identification of scaling opportunities to reduce overhead and departmental friction.',
+    title: 'Automation & Custom Software Opportunity Map',
+    description: 'Technical identification of high-impact automation, integration, and custom software initiatives to reduce overhead and latency.',
   },
   {
-    title: 'Actionable Roadmap',
-    description: 'Enterprise-grade implementation strategy tailored to your organization’s growth goals.',
+    title: 'Digital Infrastructure Roadmap',
+    description: 'Enterprise-grade implementation roadmap outlining phases, dependencies, and infrastructure decisions aligned with your growth strategy.',
   },
   {
-    title: 'Optional Consultation',
-    description: 'Executive-level session to walk leadership through findings and automation ROI.',
+    title: 'Executive Strategy Session',
+    description: 'Session with leadership to walk through findings, recommended architecture, projected ROI, and change-management considerations.',
   },
 ]
 
@@ -23,8 +23,8 @@ export const Deliverables = () => {
   return (
     <SectionWrapper className="bg-dark-bg fade-in">
       <div className="text-center mb-16">
-        <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-turquoise mb-4">
-          Here's what you get from the AI Readiness & Automation Assessment
+        <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-gold mb-4">
+          Here's what you get from the Digital Infrastructure & Automation Assessment
         </h2>
       </div>
       

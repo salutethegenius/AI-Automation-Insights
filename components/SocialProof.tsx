@@ -1,10 +1,14 @@
 import { SectionWrapper } from './ui/SectionWrapper'
 
-export const SocialProof = () => {
+interface SocialProofProps {
+  id?: string
+}
+
+export const SocialProof = ({ id }: SocialProofProps) => {
   return (
-    <SectionWrapper className="bg-dark-surface fade-in">
+    <SectionWrapper id={id} className="bg-dark-surface fade-in">
       <div className="text-center mb-12">
-        <h2 className="font-heading text-3xl md:text-4xl font-bold text-turquoise mb-6">
+        <h2 className="font-heading text-3xl md:text-4xl font-bold text-gold mb-6">
           Trusted by Bahamian businesses to identify growth opportunities with digital systems.
         </h2>
       </div>

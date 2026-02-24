@@ -4,8 +4,8 @@ export const Pricing = () => {
   return (
     <SectionWrapper className="bg-dark-bg fade-in">
       <div className="text-center mb-12">
-        <h2 className="font-heading text-3xl md:text-4xl font-bold text-turquoise mb-6">
-          Invest in Enterprise Efficiency
+        <h2 className="font-heading text-3xl md:text-4xl font-bold text-gold mb-6">
+          Invest in Company Efficiency
         </h2>
       </div>
       
@@ -17,7 +17,13 @@ export const Pricing = () => {
                 <h3 className="font-heading text-2xl font-bold text-turquoise mb-2">
                   Strategic Operational Audit
                 </h3>
-                <p className="text-white/70">Comprehensive review of SME workflows</p>
+                <p className="text-white/70">Comprehensive review of core workflows, systems, and data flows.</p>
+                <ul className="mt-4 space-y-2 text-base text-white/80">
+                  <li>End-to-end mapping of operational processes across departments</li>
+                  <li>Current-state technology stack and data architecture assessment</li>
+                  <li>Identification of manual bottlenecks, failure points, and duplicated effort</li>
+                  <li>Prioritized list of automation and infrastructure opportunities</li>
+                </ul>
               </div>
               <div className="text-3xl font-bold text-white mt-4 md:mt-0">
                 $1,500 – $2,500
@@ -29,7 +35,13 @@ export const Pricing = () => {
                 <h3 className="font-heading text-2xl font-bold text-turquoise mb-2">
                   Automation Implementation Roadmap
                 </h3>
-                <p className="text-white/70">Phase-by-phase execution strategy for scaling</p>
+                <p className="text-white/70">Phase-by-phase execution strategy for scaling your digital infrastructure.</p>
+                <ul className="mt-4 space-y-2 text-base text-white/80">
+                  <li>Target-state architecture for systems, integrations, and data flows</li>
+                  <li>Sequenced implementation plan broken into phases and milestones</li>
+                  <li>Resourcing assumptions for in-house, contractor, and vendor work</li>
+                  <li>Risk, compliance, and change-management considerations for leadership</li>
+                </ul>
               </div>
               <div className="text-3xl font-bold text-white mt-4 md:mt-0">
                 $3,500 – $5,000+
@@ -39,7 +51,7 @@ export const Pricing = () => {
         </div>
         
         <p className="text-center text-lg text-white/80">
-          Pricing is scaled based on operational complexity and organization size, ensuring maximum ROI for established enterprises.
+          Pricing is scaled based on operational complexity and organization size, ensuring maximum ROI for established Bahamian businesses.
         </p>
       </div>
     </SectionWrapper>
